@@ -16,15 +16,22 @@
 </head>
 <body>
     
-    <!-- start: app container -->
-    <div id="app">
+    <!-- start: main -->
+    <main class="debug padd-10">
 
-        <h1>
-            
-        </h1>
+        <!-- start: app container -->
+        <div id="app">
 
-    </div>
-    <!-- end: app container -->
+            <ul class="user-list-spec">
+                <li v-for="todo in todos" v-bind:class=" (todo.done === true) ? 'barred-text' : '' " >{{ todo.text }}</li>
+            </ul>
+
+        </div>
+        <!-- end: app container -->
+
+    </main>
+    <!-- end: main -->
+    
 
 
     <!-- vue -->
