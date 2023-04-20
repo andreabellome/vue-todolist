@@ -2,10 +2,6 @@
     list-style-type: none;
 }
 
-/* .user-list-spec li{
-    display: inline;
-} */
-
 .user-list-spec li::before{
     content: '\2022';
     margin-right: 0.5rem;

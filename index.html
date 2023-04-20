@@ -26,9 +26,11 @@
         <div id="app">
 
             <ul class="user-list-spec">
-                <li v-for="todo in todos" v-bind:class=" (todo.done === true) ? 'barred-text' : '' " >{{ todo.text }}
-                    <i class="fa-solid fa-x"></i>
+                <li v-for="(todo,index) in todos" v-bind:class=" (todo.done === true) ? 'barred-text' : '' " >
+                    {{ todo.text }}
+                    <i class="fa-solid fa-x" @click="eliminate(index)"></i>
                 </li> 
+
             </ul>
 
         </div>

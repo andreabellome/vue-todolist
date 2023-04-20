@@ -16,11 +16,14 @@ createApp({
                 text: 'Fare il bucato',
                 done: false
             }
-        ]
+        ],
+        elimin: 0
       }
     },
     methods: {
         /* functions Vue 3 */
-
+        eliminate(index){
+            this.todos.splice(index, 1);
+        }
     }
 }).mount('#app')
