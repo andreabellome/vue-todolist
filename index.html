@@ -29,8 +29,7 @@
                 <li v-for="(todo,index) in todos" v-bind:class=" (todo.done === true) ? 'barred-text' : '' " >
                     {{ todo.text }}
                     <i class="fa-solid fa-x" @click="eliminate(index)"></i>
-                </li> 
-
+                </li>
             </ul>
 
         </div>
