@@ -17,13 +17,22 @@ createApp({
                 done: false
             }
         ],
-        elimin: 0
+        counter: 2,
       }
     },
     methods: {
         /* functions Vue 3 */
         eliminate(index){
             this.todos.splice(index, 1);
+        },
+        addTodo(){
+            this.counter++;
+            let todoNew = document.getElementById('newTodo').value;
+            if ( todoNew == null || todoNew == "" ){
+
+            } else {
+                this.todos.push({text: todoNew, done: false});
+            }
         }
     }
 }).mount('#app')
